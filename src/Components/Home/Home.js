@@ -1,4 +1,5 @@
 import React from 'react';
+import BusinessSummery from './Home/BussnessSummery/BusinessSummery';
 import Carousel from './Home/Carsoule/Carousel';
 import Tools from './Home/Tools/Tools';
 
@@ -9,6 +10,7 @@ const Home = () => {
             <div className='mx-w-7xl mx-auto px-12'>
                 <Tools></Tools>
             </div>
+            <BusinessSummery></BusinessSummery>
         </div>
     );
 };
