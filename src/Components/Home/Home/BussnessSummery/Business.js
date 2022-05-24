@@ -11,7 +11,7 @@ const Business = () => {
                                 products request</div>
                             <h5 className='text-xl pt-2'>Don't hesitate to contact us</h5>
                         </div>
-                        <div className='justify-center items-center pt-4 pl-12'>
+                        <div className='justify-center items-center pt-4 pl-20'>
                             <button className='btn btn-primary '>Request For Quote</button>
                             <button className='btn btn-success mt-4 ml-4'>Contact Us</button>
                         </div>
