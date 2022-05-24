@@ -1,0 +1,98 @@
+[
+    {
+        "name": "Adjustable Spanner Wrench",
+        "minimumOrder": "100",
+        "img": "https://m.media-amazon.com/images/I/51tRpmRNkuL._SX466_.jpg",
+        "price": "150",
+        "description": "Packer: TAPARIA TOOLS LTD. 52MIDC SATPUR NASHIK-422007.This product comes in a proper packaging.Easy to maintain",
+        "availableQuantity": "500"
+    },
+    {
+        "name": "Sciccer",
+        "minimumOrder": "120",
+        "img": "https://m.media-amazon.com/images/I/61fmrJ1oRIL._SL1500_.jpg",
+        "price": "40",
+        "description": "This small size quality stainless steel scissor can be used for multiple purpose .",
+        "availableQuantity": "660"
+    },
+    {
+        "name": "Hummer",
+        "minimumOrder": "150",
+        "img": "https://media.istockphoto.com/photos/hammer-picture-id183759696?k=20&m=183759696&s=612x612&w=0&h=DRDKhrKEkSMcwMyYN_CnXpC9rhpr6ijtySRDw2Nedxw=",
+        "price": "320",
+        "description": "PIECE FORGED STEEL CONSTRUCTION for durability and balance.ALL STEEL DESIGN for durability and long life.",
+        "availableQuantity": "900"
+    },
+    {
+        "name": "Tester",
+        "minimumOrder": "150",
+        "img": "https://chaldn.com/_mpimage/philips-tester-35-x-52-mm-1-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D20002&q=low&v=1",
+        "price": "45",
+        "description": "Product details of Philips Electric Tester (AC Indicator - Voltage Detector).",
+        "availableQuantity": "840"
+    },
+    {
+        "name": "Screwdriver - PH2 x 100mm",
+        "minimumOrder": "230",
+        "img": "https://media.wickes.co.uk/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_jpg,h_2250,q_auto:good,w_2250/c_pad,h_2250,w_2250/v1/products/wickes/T3274_143952_00?pgw=1&pgwact=1",
+        "price": "120",
+        "description": "YZF-R1 is Yamaha’s fastest, quickest and most powerful Superbike ever",
+        "availableQuantity": "890"
+    },
+    {
+        "name": "Saw",
+        "minimumOrder": "120",
+        "img": "https://m.media-amazon.com/images/I/71upa7AM8FL._SL1500_.jpg",
+        "price": "250",
+        "description": "Package contents: professional hand saw with plastic handle.",
+        "availableQuantity": "550"
+    },
+    {
+        "name": "Drill",
+        "minimumOrder": "200",
+        "img": "https://media.istockphoto.com/photos/cordless-yellow-power-drill-isolated-on-a-white-background-picture-id184294297?b=1&k=20&m=184294297&s=170667a&w=0&h=0vSkHk1oHhoVez2poCNRo5dtg7c7W4ACgLxF-PoYiW8=",
+        "price": "575",
+        "description": "Yellow cordless power drill or screwdriver isolated on white. Other picture.",
+        "availableQuantity": "900"
+    },
+    {
+        "name": "Axe",
+        "minimumOrder": "100",
+        "img": "https://media.istockphoto.com/photos/red-axe-isolated-picture-id104642302?k=20&m=104642302&s=612x612&w=0&h=1wLafwobg8Tg5NYT1eRVYTj6QS4mDuDqbb8hnd_s1Ow=",
+        "price": "180",
+        "description": "There isn’t enough place in my backpack for a hatchet! This is no longer true. Even in a small day pack,",
+        "availableQuantity": "780"
+    },
+    {
+        "name": "chisel",
+        "minimumOrder": "140",
+        "img": "https://www.qy1.de/img/mhg-tuellenstechbeitel-340203-1a.jpg",
+        "price": "75",
+        "description": " The socket chisels from MHG are relatively large and thanks to their robustness are also suitable for carpentry applications. ",
+        "availableQuantity": "930"
+    },
+    {
+        "name": "Clamp",
+        "minimumOrder": "95",
+        "img": "https://media.istockphoto.com/photos/clamp-compression-tool-isolated-on-white-picture-id484314990?k=20&m=484314990&s=612x612&w=0&h=wG04_D19qUocyyzKU8rljKVs2CIpNpUT6Y97QUdwpO4=",
+        "price": "120",
+        "description": " A clamp is a fastening device used to hold or secure objects tightly .",
+        "availableQuantity": "570"
+    },
+    {
+        "name": "Gum Teap",
+        "minimumOrder": "80",
+        "img": "https://kashpiappi.com/wp-content/uploads/2021/11/Gum-Tape-07.jpg",
+        "price": "35",
+        "description": "Sticky on both sides of tape For mounting accessories and spares parts in cars, refrigerators, stationary and houses.",
+        "availableQuantity": "710"
+    },
+    {
+        "name": "Teap Measure",
+        "minimumOrder": "120",
+        "img": "https://static9.depositphotos.com/1585301/1193/i/600/depositphotos_11938126-stock-photo-tape-measure-isolated-on-white.jpg",
+        "price": "35",
+        "description": "The 7.5M Tape Measure has an impact-resistant case.A durable lock controls the spring return mechanism.",
+        "availableQuantity": "900"
+    }
+]
