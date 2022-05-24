@@ -3,11 +3,11 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = ({ children }) => {
     return (
-        <div className="drawer drawer-end">
+        <div className="drawer drawer-end ">
             <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col">
+            <div className="drawer-content flex flex-col sticky top-0">
 
-                <div className="w-full navbar bg-base-100 px-20">
+                <div className="w-full navbar bg-base-100 px-20 ">
                     <div className="flex-1 px-2 mx-2 text-2xl"><NavLink to='/' className='rounded-lg'>Tools</NavLink></div>
                     <div className="flex-none lg:hidden">
                         <label for="my-drawer-3" className="btn btn-square btn-ghost">
@@ -27,9 +27,9 @@ const Navbar = ({ children }) => {
                             </li>
                         </ul>
                     </div>
-                </div>
+                </div >
                 {children}
-            </div>
+            </div >
             <div className="drawer-side">
                 <label for="my-drawer-3" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100">
