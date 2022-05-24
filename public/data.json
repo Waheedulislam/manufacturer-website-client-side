@@ -1,6 +1,6 @@
 [
     {
-        "name": "Adjustable Spanner Wrench",
+        "name": "Spanner Wrench",
         "minimumOrder": "100",
         "img": "https://m.media-amazon.com/images/I/51tRpmRNkuL._SX466_.jpg",
         "price": "150",
@@ -32,7 +32,7 @@
         "availableQuantity": "840"
     },
     {
-        "name": "Screwdriver - PH2 x 100mm",
+        "name": "Screwdriver-100mm",
         "minimumOrder": "230",
         "img": "https://media.wickes.co.uk/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_jpg,h_2250,q_auto:good,w_2250/c_pad,h_2250,w_2250/v1/products/wickes/T3274_143952_00?pgw=1&pgwact=1",
         "price": "120",

@@ -4,9 +4,11 @@ import Tools from './Home/Tools/Tools';
 
 const Home = () => {
     return (
-        <div>
+        <div >
             <Carousel></Carousel>
-            <Tools></Tools>
+            <div className='mx-w-7xl mx-auto px-12'>
+                <Tools></Tools>
+            </div>
         </div>
     );
 };
