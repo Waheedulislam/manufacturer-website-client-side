@@ -3,13 +3,13 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItems = <>
-        <li><NavLink to='/' className='rounded-lg  '>Home</NavLink ></li>
-        <li><NavLink to='/about' className='rounded-lg '>About</NavLink ></li>
-        <li><NavLink to='/review' className='rounded-lg '>Review</NavLink ></li>
-        <li><NavLink to='/contact' className='rounded-lg'>Contact</NavLink ></li>
-        <li><NavLink to='/login' className='rounded-lg ' >Login</NavLink ></li>
+        <li><NavLink to='/' className='rounded-lg m-2 '>Home</NavLink ></li>
+        <li><NavLink to='/about' className='rounded-lg m-2 '>About</NavLink ></li>
+        <li><NavLink to='/review' className='rounded-lg m-2 '>Review</NavLink ></li>
+        <li><NavLink to='/contact' className='rounded-lg m-2 '>Contact</NavLink ></li>
+        <li><NavLink to='/login' className='rounded-lg m-2 ' >Login</NavLink ></li>
         <li className="dropdown dropdown-hover dropdown-end ">
-            <label tabindex="0" className="btn btn-primary btn-outline m-1 rounded-lg">Book Now</label>
+            <label tabindex="0" className="btn btn-primary btn-outline m-2 rounded-lg">Book Now</label>
         </li>
         {
             // user && <li><Link to='/dashboard'>DashBoard</Link></li>
