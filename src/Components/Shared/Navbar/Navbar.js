@@ -3,9 +3,9 @@ import { Link, NavLink } from 'react-router-dom';
 
 const Navbar = ({ children }) => {
     return (
-        <div className="drawer drawer-end">
-            <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col ">
+        <div className="drawer drawer-end ">
+            <input id="my-drawer-3" type="checkbox" className="drawer-toggle overflow-y-hidden" />
+            <div className="drawer-content flex flex-col overflow-y-hidden">
 
                 <div className="w-full navbar bg-base-100 px-20 ">
                     <div className="flex-1 px-2 mx-2 text-2xl"><NavLink to='/' className='rounded-lg'>Tools</NavLink></div>
