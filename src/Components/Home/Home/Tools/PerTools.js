@@ -13,7 +13,7 @@ const PerTools = ({ item }) => {
                     <h5 className='text-xl'>Available Quantity: <span>{availableQuantity}</span></h5>
                     <h5 className='text-xl'>Minimum Quantity: <span>{minimumOrder}</span></h5>
                     <div class="card-actions justify-center">
-                        <button class="btn btn-primary">Buy Now</button>
+                        <button class=" btn btn-primary w-80">Buy Now</button>
                     </div>
                 </div>
             </div>

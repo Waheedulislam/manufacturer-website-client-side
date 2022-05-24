@@ -9,7 +9,7 @@ const Navbar = () => {
         <li><NavLink to='/contact' className='rounded-lg m-2 '>Contact</NavLink ></li>
         <li><NavLink to='/login' className='rounded-lg m-2 ' >Login</NavLink ></li>
         <li className="dropdown dropdown-hover dropdown-end ">
-            <label tabindex="0" className="btn btn-primary btn-outline m-2 rounded-lg">Book Now</label>
+            <label tabIndex="0" className="btn btn-primary btn-outline m-2 rounded-lg">Book Now</label>
         </li>
         {
             // user && <li><Link to='/dashboard'>DashBoard</Link></li>
