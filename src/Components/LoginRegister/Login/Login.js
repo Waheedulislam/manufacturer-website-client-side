@@ -1,16 +1,41 @@
 import React from 'react';
-import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import { useForm } from "react-hook-form";
+import Loading from '../../Shared/Loading/Loading';
+
 const Login = () => {
-    const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
-    if (user) {
-        console.log(user);
+
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
+
+    let signInError;
+
+    if (error || gError) {
+        signInError = <h5 className=' text-red-500 pt-0 pb-2'><small>{error?.message ||
+            gError?.message}</small></h5>
     }
+
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+    if (gUser) {
+        console.log(gUser);
+    }
+
+
     const onSubmit = data => {
-        console.log(data)
+        console.log(data);
+        signInWithEmailAndPassword(data.email, data.password);
     };
+
     return (
         <div>
             <div className='flex justify-center items-center h-screen'>
@@ -66,7 +91,9 @@ const Login = () => {
                                     {errors.password?.type === 'minLength' && <span className="label-text-alt text-red-500">{errors.password.message}</span>}
                                 </label>
                             </div>
-
+                            {
+                                signInError
+                            }
                             <input className='btn btn-primary w-full max-w-xs' type="submit" />
                         </form>
                         <div className="divider">OR</div>
