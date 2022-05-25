@@ -3,8 +3,8 @@ import React from 'react';
 const Business = () => {
     return (
         <div className='flex justify-center  pt-12' >
-            <div class="card bg-base-100 shadow-2xl">
-                <div class="card-body ">
+            <div className="card bg-base-100 shadow-2xl">
+                <div className="card-body ">
                     <div className='flex '>
                         <div>
                             <div className="text-2xl font-bold text-primary ">Have any question about us or get a <br />

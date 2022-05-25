@@ -6,7 +6,7 @@ const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     return (
         <div>
-            <button onClick={() => signInWithGoogle()} class="btn btn-outline btn-primary w-80">Continue With Google</button>
+            <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-primary w-80">Continue With Google</button>
         </div>
     );
 };
