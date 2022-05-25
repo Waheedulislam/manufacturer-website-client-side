@@ -9,6 +9,7 @@ import Review from './Components/Review/Review';
 import About from './Components/About/About';
 import NotFound from './Components/Shared/NotFound/NotFound';
 import Footer from './Components/Shared/Footer/Footer';
+import Purchase from './Components/Purchase/Purchase';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="about" element={<About></About>} />
         <Route path='login' element={<Login></Login>}></Route>
         <Route path="register" element={<Register></Register>} />
+        <Route path='purchase/:purchaseId' element={<Purchase></Purchase>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "name": "Spanner Wrench",
         "minimumOrder": "100",
         "img": "https://m.media-amazon.com/images/I/51tRpmRNkuL._SX466_.jpg",
@@ -8,6 +9,7 @@
         "availableQuantity": "500"
     },
     {
+        "id": "2",
         "name": "Sciccer",
         "minimumOrder": "120",
         "img": "https://m.media-amazon.com/images/I/61fmrJ1oRIL._SL1500_.jpg",
@@ -16,6 +18,7 @@
         "availableQuantity": "660"
     },
     {
+        "id": "3",
         "name": "Hummer",
         "minimumOrder": "150",
         "img": "https://media.istockphoto.com/photos/hammer-picture-id183759696?k=20&m=183759696&s=612x612&w=0&h=DRDKhrKEkSMcwMyYN_CnXpC9rhpr6ijtySRDw2Nedxw=",
@@ -24,6 +27,7 @@
         "availableQuantity": "900"
     },
     {
+        "id": "4",
         "name": "Tester",
         "minimumOrder": "150",
         "img": "https://chaldn.com/_mpimage/philips-tester-35-x-52-mm-1-pcs?src=https%3A%2F%2Feggyolk.chaldal.com%2Fapi%2FPicture%2FRaw%3FpictureId%3D20002&q=low&v=1",
@@ -32,6 +36,7 @@
         "availableQuantity": "840"
     },
     {
+        "id": "5",
         "name": "Screwdriver-100mm",
         "minimumOrder": "230",
         "img": "https://media.wickes.co.uk/image/upload/b_rgb:FFFFFF,c_pad,dpr_1.0,f_jpg,h_2250,q_auto:good,w_2250/c_pad,h_2250,w_2250/v1/products/wickes/T3274_143952_00?pgw=1&pgwact=1",
@@ -40,6 +45,7 @@
         "availableQuantity": "890"
     },
     {
+        "id": "6",
         "name": "Saw",
         "minimumOrder": "120",
         "img": "https://m.media-amazon.com/images/I/71upa7AM8FL._SL1500_.jpg",
@@ -48,6 +54,7 @@
         "availableQuantity": "550"
     },
     {
+        "id": "7",
         "name": "Drill",
         "minimumOrder": "200",
         "img": "https://media.istockphoto.com/photos/cordless-yellow-power-drill-isolated-on-a-white-background-picture-id184294297?b=1&k=20&m=184294297&s=170667a&w=0&h=0vSkHk1oHhoVez2poCNRo5dtg7c7W4ACgLxF-PoYiW8=",
@@ -56,6 +63,7 @@
         "availableQuantity": "900"
     },
     {
+        "id": "8",
         "name": "Axe",
         "minimumOrder": "100",
         "img": "https://media.istockphoto.com/photos/red-axe-isolated-picture-id104642302?k=20&m=104642302&s=612x612&w=0&h=1wLafwobg8Tg5NYT1eRVYTj6QS4mDuDqbb8hnd_s1Ow=",
@@ -64,6 +72,7 @@
         "availableQuantity": "780"
     },
     {
+        "id": "9",
         "name": "chisel",
         "minimumOrder": "140",
         "img": "https://www.qy1.de/img/mhg-tuellenstechbeitel-340203-1a.jpg",
@@ -72,6 +81,7 @@
         "availableQuantity": "930"
     },
     {
+        "id": "10",
         "name": "Clamp",
         "minimumOrder": "95",
         "img": "https://media.istockphoto.com/photos/clamp-compression-tool-isolated-on-white-picture-id484314990?k=20&m=484314990&s=612x612&w=0&h=wG04_D19qUocyyzKU8rljKVs2CIpNpUT6Y97QUdwpO4=",
@@ -80,6 +90,7 @@
         "availableQuantity": "570"
     },
     {
+        "id": "11",
         "name": "Gum Teap",
         "minimumOrder": "80",
         "img": "https://kashpiappi.com/wp-content/uploads/2021/11/Gum-Tape-07.jpg",
@@ -88,6 +99,7 @@
         "availableQuantity": "710"
     },
     {
+        "id": "12",
         "name": "Teap Measure",
         "minimumOrder": "120",
         "img": "https://static9.depositphotos.com/1585301/1193/i/600/depositphotos_11938126-stock-photo-tape-measure-isolated-on-white.jpg",
