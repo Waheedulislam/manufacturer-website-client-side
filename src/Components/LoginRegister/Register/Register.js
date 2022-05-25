@@ -8,6 +8,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const Register = () => {
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+
     const navigate = useNavigate();
 
     const [
@@ -32,7 +33,7 @@ const Register = () => {
     }
 
     if (user || gUser) {
-        console.log(gUser);
+        navigate('/home')
     }
 
 
