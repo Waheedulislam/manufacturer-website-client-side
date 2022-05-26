@@ -16,8 +16,35 @@ const MyOrders = () => {
     }, [user]);
 
     return (
-        <div>
-            <h1>My Orders: {orders.length}</h1>
+        <div class="overflow-x-auto">
+            <table class="table w-full">
+                {/* <!-- head --> */}
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Quantity</th>
+                        <th>Phon Number</th>
+                        <th>Edits</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        orders.map((order, index) => <tr>
+                            <th>{index + 1}</th>
+                            <td>{order.userName}</td>
+                            <td>{order.email}</td>
+                            <td>{order.quantity}</td>
+                            <td>{order.phon}</td>
+                            <td>
+                                <button className='btn btn-error'>Delete</button>
+                            </td>
+                        </tr>)
+                    }
+
+                </tbody>
+            </table>
         </div>
     );
 };
