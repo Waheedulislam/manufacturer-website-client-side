@@ -20,16 +20,8 @@ const Purchase = () => {
     }, [items])
 
     let error;
-    const handleQuantity = e => {
-        if (items.availableQuantity < e) {
-            alert('Please check Available Quantity')
-        } else if (items.minimumOrder > e) {
-            alert('min')
-        }
-        else {
 
-        }
-    }
+
     // submit 
     const handleNewItem = event => {
         event.preventDefault();
@@ -38,6 +30,16 @@ const Purchase = () => {
             userName: user.displayName,
             address: event.target.address.value,
             phon: event.target.phon.value,
+        }
+
+        if ((event.target.quantity.value) < (items.minimumOrder)) {
+            alert('The order quantity can not be Minimum than the available quantity.')
+        } else if ((event.target.quantity.value) > (items.availableQuantity)) {
+            // post
+            alert('The order quantity can not be higher than the available quantity.')
+        }
+        else {
+
         }
         console.log(addOrder);
     }
@@ -61,23 +63,24 @@ const Purchase = () => {
                         <div class="card w-full mt-12 bg-base-100 shadow-xl ">
                             <div class="card-body ">
                                 <h2 class="text-2xl font-bold pb-2 text-center text-primary">Order Confirm</h2>
-                                <div className='pl-14'>
+                                <div className='lg:pl-14'>
 
                                     {/* from */}
                                     <form onSubmit={handleNewItem}>
+
                                         <div className='pl-20'>
                                             <div class="form-control w-full max-w-xs">
+
                                                 <label class="label">
                                                     <span class="label-text font-bold pl-10 text-primary">Quantity</span>
                                                 </label>
 
                                                 <input type="number"
-                                                    value='quantity'
                                                     name='quantity'
                                                     placeholder="Quantity"
                                                     class="mb-3 input input-bordered w-36  max-w-xs"
-                                                    onChange={handleQuantity}
                                                 />
+
                                             </div>
 
                                         </div>
@@ -98,7 +101,7 @@ const Purchase = () => {
                                             <input type="text" autoComplete='off' name='phon' placeholder="Phone Number" class="input input-bordered w-full max-w-xs" />
                                         </div>
 
-                                        <input type="submit" class="ml-8 w-8/12 text-center btn btn-primary" value="Submit Information" />
+                                        <input type="submit" class="sm:w-56 ml-8 w-8/12 text-center btn btn-primary" value="Submit Information" />
                                     </form>
                                 </div>
                             </div>
