@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init'
 import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import useToken from '../../../hooks/useToken';
 
 const Login = () => {
-    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const [
+        signInWithGoogle,
+        gUser,
+        googlLoading,
+        googleError
+    ] = useSignInWithGoogle(auth);
 
+    // login from error
+    const {
+        register,
+        formState: { errors },
+        handleSubmit
+    } = useForm();
+
+    // login email & password
     const [
         signInWithEmailAndPassword,
         user,
@@ -16,30 +29,31 @@ const Login = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [token] = useToken(user || gUser);
+
     let signInError;
     let navigate = useNavigate();
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    if (error || gError) {
-        signInError = <h5 className=' text-red-500 pt-0 pb-2'><small>{error?.message ||
-            gError?.message}</small></h5>
-    }
+    useEffect(() => {
+        if (token) {
+            navigate(from, { replace: true })
+        }
+    }, [token, from, navigate])
 
-    if (loading || gLoading) {
+    if (loading || googlLoading) {
         return <Loading></Loading>
     }
-
-    if (user || gUser) {
-        navigate(from, { replace: true });
+    if (error || googleError) {
+        signInError = <p className='text-red-500'><small>{error?.message || googleError?.message}</small></p>
     }
 
 
     const onSubmit = data => {
-        console.log(data);
+        console.log(data)
         signInWithEmailAndPassword(data.email, data.password);
     };
-
     return (
         <div>
             <div className='flex justify-center items-center h-screen'>
