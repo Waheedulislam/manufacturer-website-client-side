@@ -11,20 +11,19 @@ const Navbar = () => {
         signOut(auth);
     };
     const menuItems = <>
-        <li><NavLink to='/' className='rounded-lg m-2 '>Home</NavLink ></li>
+        <li><NavLink to='/home' className='rounded-lg m-2 '>Home</NavLink ></li>
         <li><NavLink to='/about' className='rounded-lg m-2 '>About</NavLink ></li>
+        {
+            <li><NavLink to='/dashboard' className='rounded-lg m-2 '>DashBoard</NavLink ></li>
+        }
         <li><NavLink to='/review' className='rounded-lg m-2 '>Review</NavLink ></li>
         <li><NavLink to='/contact' className='rounded-lg m-2 '>Contact</NavLink ></li>
-        <li className="dropdown dropdown-hover dropdown-end ">
-            <label tabIndex="0" className="btn btn-primary btn-outline m-2 rounded-lg">Book Now</label>
-        </li>
+
         <li>{user ? <button onClick={logout} className="rounded-lg m-2 text-white btn btn-primary">Sign Out</button> :
             <NavLink to='/login' className='rounded-lg m-2 btn btn-primary text-white' >Login</NavLink >
         }</li>
 
-        {
-            // user && <li><Link to='/dashboard'>DashBoard</Link></li>
-        }
+
     </>
     return (
         <div>
