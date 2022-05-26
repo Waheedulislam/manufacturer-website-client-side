@@ -12,6 +12,7 @@ const BusinessSummery = () => {
                 <div className="text-4xl font-bold text-primary text-center">MILLIONS BUSINESS TRUST US</div>
                 <h4 className='text-center text-xl pt-4 text-blue-900 '>TRY TO UNDERSTAND USERS EXPECTATION</h4>
             </div>
+
             <div className="shadow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-20">
                 <div className='text-center'>
                     <div className="stat-figure text-primary">
