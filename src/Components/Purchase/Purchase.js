@@ -103,11 +103,11 @@ const Purchase = () => {
                                         </div>
                                         {/* name  */}
                                         <div class="form-control pb-3 text-center w-full max-w-xs">
-                                            <input type="text" name='name' placeholder="Name" disabled value={user.displayName} class="input input-bordered w-full max-w-md " />
+                                            <input type="text" name='name' placeholder="Name" readOnly value={user.displayName} class="input input-bordered w-full max-w-md " />
                                         </div>
                                         {/* email */}
                                         <div class="form-control pb-3 text-center w-full max-w-xs">
-                                            <input type="email" value={user.email} disabled name='email' placeholder="Email Address" class="input input-bordered w-full max-w-xs" />
+                                            <input type="email" value={user.email} readOnly name='email' placeholder="Email Address" class="input input-bordered w-full max-w-xs" />
                                         </div>
                                         {/* address  */}
                                         <div class="form-control pb-3 text-center w-full max-w-xs">
