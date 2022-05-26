@@ -19,8 +19,6 @@ const Purchase = () => {
             })
     }, [items])
 
-    let error;
-
 
     // submit 
     const handleNewItem = event => {
@@ -28,18 +26,34 @@ const Purchase = () => {
         const addOrder = {
             email: user.email,
             userName: user.displayName,
+            quantity: event.target.quantity.value,
             address: event.target.address.value,
             phon: event.target.phon.value,
         }
+        console.log(addOrder);
 
         if ((event.target.quantity.value) < (items.minimumOrder)) {
             alert('The order quantity can not be Minimum than the available quantity.')
-        } else if ((event.target.quantity.value) > (items.availableQuantity)) {
+        }
+        else if ((event.target.quantity.value) > (items.availableQuantity)) {
             // post
             alert('The order quantity can not be higher than the available quantity.')
         }
         else {
-
+            const url = `http://localhost:5000/itemOrder`
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(addOrder)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    alert('Successful Item added')
+                    event.target.reset();
+                })
         }
         console.log(addOrder);
     }
@@ -68,6 +82,7 @@ const Purchase = () => {
                                     {/* from */}
                                     <form onSubmit={handleNewItem}>
 
+                                        {/* quantity */}
                                         <div className='pl-20'>
                                             <div class="form-control w-full max-w-xs">
 
@@ -75,7 +90,9 @@ const Purchase = () => {
                                                     <span class="label-text font-bold pl-10 text-primary">Quantity</span>
                                                 </label>
 
-                                                <input type="number"
+                                                <input
+                                                    required
+                                                    type="number"
                                                     name='quantity'
                                                     placeholder="Quantity"
                                                     class="mb-3 input input-bordered w-36  max-w-xs"
@@ -94,11 +111,11 @@ const Purchase = () => {
                                         </div>
                                         {/* address  */}
                                         <div class="form-control pb-3 text-center w-full max-w-xs">
-                                            <input type="text" autoComplete='off' name='address' placeholder="Address" class="input input-bordered w-full max-w-xs" />
+                                            <input type="text" autoComplete='off' name='address' required placeholder="Address" class="input input-bordered w-full max-w-xs" />
                                         </div>
                                         {/* phone  */}
                                         <div class="form-control pb-3 text-center w-full max-w-xs">
-                                            <input type="text" autoComplete='off' name='phon' placeholder="Phone Number" class="input input-bordered w-full max-w-xs" />
+                                            <input type="text" required autoComplete='off' name='phon' placeholder="Phone Number" class="input input-bordered w-full max-w-xs" />
                                         </div>
 
                                         <input type="submit" class="sm:w-56 ml-8 w-8/12 text-center btn btn-primary" value="Submit Information" />
