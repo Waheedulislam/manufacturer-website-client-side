@@ -1,28 +1,24 @@
-# Bike Way
+# Tools way
 ## [Live-Site](https://tools-23b08.web.app/)
 
 Click  here to Live-Site-link: https://tools-23b08.web.app/
 
 ## This website details:
 ***
-A list of Bike way website used within the project and details:
+A list of Tools way website used within the project and details:
 
-1)  It is a React Bike way webpage.
+1)  It is a React Tools way webpage.
 
-2)  It is a Single page application.
+2)  It has been use JWT Web Token.
 
 3)  It has been used  firebase framework .
 
 4)  The server site mongodb has been used on this website. And has been  deploy this site Heroku framework.
 
-4)  It has been used many framework. firebase react hooks,react-bootstrap,bootstrap,custom-css,react-tost etc.
+5)  It has been used many framework. firebase react hooks,TailWind,DaisyUI css Component,react-tost etc.
 
-5)  Many important things have been used in the routes.
+6)  Many important things have been used in the routes.
 
-6) Register and login has been used email-verification and forget-password.
+7) Register and login has been used email-verification and forget-password.
 
-7) It has been used axios framework.
-
-8) Its website is deploy by Firebase framework.
-
-8) This website has been granted copyright (Copyright © 2022 bikeway.com)
+8) Its website is deploy by Firebase framework & server site deploy heroku.
