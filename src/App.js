@@ -5,7 +5,8 @@ import Tools from './Components/Home/Home/Tools/Tools';
 import Navbar from './Components/Shared/Navbar/Navbar';
 import Login from './Components/LoginRegister/Login/Login'
 import Register from './Components/LoginRegister/Register/Register'
-import Review from './Components/Review/Review';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import About from './Components/About/About';
 import NotFound from './Components/Shared/NotFound/NotFound';
 import Footer from './Components/Shared/Footer/Footer';
@@ -62,6 +63,7 @@ function App() {
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
 
 
     </div >
