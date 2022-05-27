@@ -16,7 +16,7 @@ const MyProfile = () => {
             phon: event.target.phon.value,
             linkedIn: event.target.linkedIn.value,
         }
-        const url = `http://localhost:5000/profile`
+        const url = `https://protected-gorge-88195.herokuapp.com/profile`
         fetch(url, {
             method: 'POST',
             headers: {
