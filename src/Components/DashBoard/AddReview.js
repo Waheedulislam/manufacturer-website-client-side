@@ -25,14 +25,14 @@ const AddReview = () => {
         console.log(addReview);
     }
     return (
-        <div className='lg:pl-48  pt-12'>
+        <div className='pt-6'>
 
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card lg:w-6/12 lg:mx-52 bg-base-100 shadow-xl pt-5">
 
                 <div className="card-body">
-                    <h1 className='text-4xl font-bold text-primary'>Add a Reviews</h1>
+                    <h1 className='text-4xl font-bold text-primary text-center pb-3'>Add a Reviews</h1>
 
-                    <form onSubmit={handleAddReview} className='pt-6'>
+                    <form onSubmit={handleAddReview} className='lg:ml-16'>
                         {/* name  */}
                         <div className="form-control pb-3 text-center w-full max-w-xs">
                             <input type="text" name='name' placeholder="Name" className="input input-bordered w-full max-w-md " />
@@ -48,8 +48,8 @@ const AddReview = () => {
                         <input type="submit" className="sm:w-56 ml-8 w-8/12 text-center btn btn-primary" value="Submit REview" />
                     </form>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 };
 
