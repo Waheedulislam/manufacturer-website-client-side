@@ -4,7 +4,7 @@ import Loading from '../Shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const ManageUsers = () => {
-    const { data: users, isLoading } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')} `
@@ -13,7 +13,6 @@ const ManageUsers = () => {
     if (isLoading) {
         return <Loading></Loading>
     }
-    console.log(users);
     return (
         <div>
             <h2 className="text-2xl">All Users: {users.length}</h2>
@@ -23,8 +22,8 @@ const ManageUsers = () => {
                         <tr>
                             <th></th>
                             <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
+                            <th>user & admin</th>
+                            <th>edit user</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +32,7 @@ const ManageUsers = () => {
                             users.map(user => <UserRow
                                 key={user._id}
                                 user={user}
+                                refetch={refetch}
                             ></UserRow>)
                         }
                     </tbody>
