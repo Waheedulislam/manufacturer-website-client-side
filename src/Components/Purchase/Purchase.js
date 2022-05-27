@@ -11,7 +11,7 @@ const Purchase = () => {
 
     // load oneItem
     useEffect(() => {
-        const url = `http://localhost:5000/itemPurchase/${purchaseId}`
+        const url = `https://protected-gorge-88195.herokuapp.com/itemPurchase/${purchaseId}`
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -40,7 +40,7 @@ const Purchase = () => {
             alert('The order quantity can not be higher than the available quantity.')
         }
         else {
-            const url = `http://localhost:5000/itemOrder`
+            const url = `https://protected-gorge-88195.herokuapp.com/itemOrder`
             fetch(url, {
                 method: 'POST',
                 headers: {
