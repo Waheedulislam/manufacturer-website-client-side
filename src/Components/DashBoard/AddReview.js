@@ -8,7 +8,7 @@ const AddReview = () => {
             rating: event.target.rating.value,
             description: event.target.shortDescription.value,
         }
-        const url = `http://localhost:5000/review`
+        const url = `https://protected-gorge-88195.herokuapp.com/review`
         fetch(url, {
             method: 'POST',
             headers: {
@@ -30,7 +30,7 @@ const AddReview = () => {
             <div className="card w-96 bg-base-100 shadow-xl">
 
                 <div className="card-body">
-                    <h1 className='text-4xl font-bold'>please Add a Review</h1>
+                    <h1 className='text-4xl font-bold text-primary'>Add a Reviews</h1>
 
                     <form onSubmit={handleAddReview} className='pt-6'>
                         {/* name  */}
