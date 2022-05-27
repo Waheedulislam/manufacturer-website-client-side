@@ -17,7 +17,6 @@ const Navbar = () => {
         {
             user && <li><NavLink to='/dashBoard' className='rounded-lg m-2 '>DashBoard</NavLink ></li>
         }
-        <li><NavLink to='/review' className='rounded-lg m-2 '>Review</NavLink ></li>
         <li><NavLink to='/contact' className='rounded-lg m-2 '>Contact</NavLink ></li>
 
         <li>{user ? <button onClick={logout} className="rounded-lg m-2 text-white btn btn-primary">Sign Out</button> :
