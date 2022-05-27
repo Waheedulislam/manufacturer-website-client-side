@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init'
+import { toast } from 'react-toastify';
 
 const Purchase = () => {
     const { purchaseId } = useParams();
@@ -33,11 +34,11 @@ const Purchase = () => {
         console.log(addOrder);
 
         if ((event.target.quantity.value) < (items.minimumOrder)) {
-            alert('The order quantity can not be Minimum than the available quantity.')
+            toast.error('The order quantity can not be Minimum than the available quantity.')
         }
-        else if ((event.target.quantity.value) > (items.availableQuantity)) {
+        else if ((event.target.quantity.value) >= (items.availableQuantity)) {
             // post
-            alert('The order quantity can not be higher than the available quantity.')
+            toast.error('The order quantity can not be higher than the available quantity.')
         }
         else {
             const url = `https://protected-gorge-88195.herokuapp.com/itemOrder`
@@ -51,7 +52,7 @@ const Purchase = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    alert('Successful Item added')
+                    toast('Successful Item added')
                     event.target.reset();
                 })
         }
