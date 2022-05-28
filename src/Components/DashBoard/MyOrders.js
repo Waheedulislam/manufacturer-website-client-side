@@ -34,13 +34,13 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete ?')
         if (proceed) {
-            const url = `http://localhost:5000/itemOrder/${user.email}`
+            const url = `http://localhost:5000/itemOrder/${id}`
             fetch(url, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
                 .then(data => {
-                    const uiDelete = orders.filter(item => item.email !== user.email);
+                    const uiDelete = orders.filter(item => item._id !== id);
                     setOrders(uiDelete);
                     toast('Success Fully deleted product')
                 })
@@ -53,10 +53,11 @@ const MyOrders = () => {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Name</th>
+                        <th>Your Name</th>
                         <th>Email</th>
+                        <th>Product Name</th>
                         <th>Quantity</th>
-                        <th>Phon Number</th>
+                        <th>Price</th>
                         <th>Edits</th>
                     </tr>
                 </thead>
@@ -66,10 +67,11 @@ const MyOrders = () => {
                             <th>{index + 1}</th>
                             <td>{order.userName}</td>
                             <td>{order.email}</td>
+                            <td>{order.name}</td>
                             <td>{order.quantity}</td>
-                            <td>{order.phon}</td>
+                            <td>${order.price}</td>
                             <td>
-                                <button className='btn btn-error' onClick={() => handleDelete(orders.email)}>Delete</button>
+                                <button className='btn btn-error' onClick={() => handleDelete(order._id)}>Delete</button>
                             </td>
                         </tr>)
                     }

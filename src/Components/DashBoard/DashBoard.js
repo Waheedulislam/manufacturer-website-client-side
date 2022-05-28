@@ -1,6 +1,6 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Outlet } from 'react-router-dom';
+import { Link, NavLink, Outlet } from 'react-router-dom';
 import auth from '../../firebase.init';
 import useAdmin from '../../hooks/useAdmin';
 
@@ -16,23 +16,23 @@ const DashBoard = () => {
                 <Outlet></Outlet>
 
             </div>
-            <div className="drawer-side">
+            <div className="drawer-side ">
                 <label for="dashboard-sidebar" className="drawer-overlay"></label>
-                <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
+                <ul className="menu p-4 overflow-y-auto w-80  text-base-content bg-base-100">
 
 
-                    < li > <Link to='/dashBoard'>My Orders</Link></li>
-                    <li><Link to='/dashBoard/review'>Add a Review</Link></li>
+                    < li className='py-2' > <Link to='/dashBoard'>My Orders</Link></li>
+                    <li className='pb-2'><NavLink to='/dashBoard/review'>Add a Review</NavLink></li>
 
 
-                    <li><Link to='/dashBoard/myProfile'>My Profile</Link></li>
+                    <li className='pb-2'><NavLink to='/dashBoard/myProfile'>My Profile</NavLink></li>
 
                     {
                         admin &&
-                        <><li><Link to='/dashBoard/manageAllOrder'>Manage All Orders</Link></li>
-                            <li><Link to='/dashBoard/addProduct'>Add a Product</Link></li>
-                            <li><Link to='/dashBoard/manageProduct'>Manage Products</Link></li>
-                            <li><Link to='/dashBoard/manageUsers'>Make Admin</Link></li>
+                        <><li className='pb-2'> <NavLink to='/dashBoard/manageAllOrder'>Manage All Orders</NavLink></li>
+                            <li className='pb-2'><NavLink to='/dashBoard/addProduct'>Add a Product</NavLink></li>
+                            <li className='pb-2'><NavLink to='/dashBoard/manageProduct'>Manage Products</NavLink></li>
+                            <li className='pb-2'><NavLink to='/dashBoard/manageUsers'>Make Admin</NavLink></li>
                         </>
                     }
                 </ul>
