@@ -7,6 +7,7 @@ import { toast } from 'react-toastify';
 const Purchase = () => {
     const { purchaseId } = useParams();
     const [items, setItems] = useState({});
+    // console.log(items);
 
     const [user] = useAuthState(auth);
 
@@ -27,6 +28,9 @@ const Purchase = () => {
         const addOrder = {
             email: user.email,
             userName: user.displayName,
+            name: items.name,
+            id: items._id,
+            price: items.price,
             quantity: event.target.quantity.value,
             address: event.target.address.value,
             phon: event.target.phon.value,

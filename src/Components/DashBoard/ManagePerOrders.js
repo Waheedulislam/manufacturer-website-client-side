@@ -16,9 +16,11 @@ const ManagePerOrders = ({ item }) => {
             })
                 .then(res => res.json())
                 .then(data => {
+                    // const uiDelete = items.filter(item => item._id !== id);
+                    // setItems(uiDelete);
                     const uiDelete = items.filter(item => item._id !== id);
+                    setItems(uiDelete)
                     toast('Success Fully Product Delete')
-                    setItems(uiDelete);
                 })
         }
     }
