@@ -19,12 +19,14 @@ const DashBoard = () => {
             <div className="drawer-side">
                 <label for="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content">
-                    < li > <Link to='/dashBoard'>My Orders</Link></li>
 
-                    {
-                        user && <li><Link to='/dashBoard/review'>Add a Review</Link></li>
-                    }
+
+                    < li > <Link to='/dashBoard'>My Orders</Link></li>
+                    <li><Link to='/dashBoard/review'>Add a Review</Link></li>
+
+
                     <li><Link to='/dashBoard/myProfile'>My Profile</Link></li>
+
                     {
                         admin &&
                         <><li><Link to='/dashBoard/manageAllOrder'>Manage All Orders</Link></li>

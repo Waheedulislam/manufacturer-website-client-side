@@ -20,6 +20,7 @@ import ManageUsers from './Components/DashBoard/ManageUsers';
 import RequireAdmin from './Components/LoginRegister/Login/RequireAuth/RequireAdmin';
 import ManageAllOrders from './Components/DashBoard/ManageAllOrders';
 import AddAProduct from './Components/DashBoard/AddAProduct';
+import ManageProducts from './Components/DashBoard/ManageProducts';
 
 function App() {
   return (
@@ -55,8 +56,8 @@ function App() {
 
           <Route path='addProduct' element={<RequireAdmin><AddAProduct></AddAProduct></RequireAdmin>}></Route>
 
-          <Route path='manageProduct' element={<RequireAdmin><ManageAllOrders
-          ></ManageAllOrders></RequireAdmin>}></Route>
+          <Route path='manageProduct' element={<RequireAdmin><ManageProducts
+          ></ManageProducts></RequireAdmin>}></Route>
 
         </Route>
 
