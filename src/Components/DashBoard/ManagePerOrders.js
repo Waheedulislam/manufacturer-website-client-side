@@ -1,11 +1,9 @@
 import React from 'react';
 import { toast } from 'react-toastify';
-import useItems from '../../hooks/useItems';
 
-const ManagePerOrders = ({ item }) => {
+const ManagePerOrders = ({ item, reload, setReload }) => {
     const { img, name, description, minimumOrder, availableQuantity, price } = item;
 
-    const [items, setItems] = useItems();
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete ?')
@@ -16,10 +14,7 @@ const ManagePerOrders = ({ item }) => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    // const uiDelete = items.filter(item => item._id !== id);
-                    // setItems(uiDelete);
-                    const uiDelete = items.filter(item => item._id !== id);
-                    setItems(uiDelete)
+                    setReload(!reload);
                     toast('Success Fully Product Delete')
                 })
         }

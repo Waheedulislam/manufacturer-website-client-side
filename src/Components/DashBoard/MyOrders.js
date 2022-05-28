@@ -1,7 +1,7 @@
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
@@ -53,11 +53,10 @@ const MyOrders = () => {
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Your Name</th>
-                        <th>Email</th>
                         <th>Product Name</th>
+                        <th>Email</th>
                         <th>Quantity</th>
-                        <th>Price</th>
+                        <th>payment</th>
                         <th>Edits</th>
                     </tr>
                 </thead>
@@ -65,13 +64,16 @@ const MyOrders = () => {
                     {
                         orders.map((order, index) => <tr>
                             <th>{index + 1}</th>
-                            <td>{order.userName}</td>
-                            <td>{order.email}</td>
                             <td>{order.name}</td>
+                            <td>{order.email
+                            }</td>
                             <td>{order.quantity}</td>
-                            <td>${order.price}</td>
+
+                            <td>{(order.price && !order.paid) && <Link to={`/dashBoard/payment/${order._id}`}><button className='btn btn-primary btn-xs'>Pay</button></Link>}
+                                {(order.price && order.paid) && <span className='text-primary'>Paid</span>}
+                            </td>
                             <td>
-                                <button className='btn btn-error' onClick={() => handleDelete(order._id)}>Delete</button>
+                                <button className='btn btn-error text-white btn-sm' onClick={() => handleDelete(order._id)}>cancel</button>
                             </td>
                         </tr>)
                     }
