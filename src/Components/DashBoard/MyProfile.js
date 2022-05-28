@@ -1,10 +1,13 @@
+import { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 const MyProfile = () => {
     const [user] = useAuthState(auth);
-
+    const [profileUpData, setProfileUpData] = useState([]);
+    console.log(profileUpData);
+    // update user profile
     const handleProfile = event => {
         event.preventDefault();
         const profile = {
@@ -15,9 +18,9 @@ const MyProfile = () => {
             phon: event.target.phon.value,
             linkedIn: event.target.linkedIn.value,
         }
-        const url = `https://protected-gorge-88195.herokuapp.com/profile`
+        const url = `https://protected-gorge-88195.herokuapp.com/user/${user.email}`
         fetch(url, {
-            method: 'POST',
+            method: 'PUT',
             headers: {
                 'content-type': 'application/json'
             },
@@ -25,24 +28,49 @@ const MyProfile = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
-                toast('Successful Update Profile')
-                event.target.reset();
+                console.log('data update', data);
+                toast('Your Profile is  Updated. ')
+
             })
-        console.log(profile);
+        event.target.reset();
     };
+
+    // get user profile
+    useEffect(() => {
+        const url = `https://protected-gorge-88195.herokuapp.com/user`
+        fetch(url, {
+            method: 'GET',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearer ${localStorage.getItem('accessToken')}`
+            },
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log('data', data);
+                setProfileUpData(data)
+            })
+    }, [])
     return (
         <div>
             <h1 className='text-2xl text-primary font-bold'>My Profile</h1>
             <div class="card lg:w-6/12 lg:mx-60 bg-base-100 shadow-xl ">
                 <div class="card-body">
+                    <div>
+                        {
+                            profileUpData.map(profile => {
+                                if (user.email === profile.email) {
+                                    return <ul>
+                                        <p>{profile.email}</p>
+                                        <p>{profile.phon}</p>
+                                    </ul>
+                                }
+                            })
+                        }
+                    </div>
                     <form onSubmit={handleProfile} className='lg:ml-16 '>
                         <div className="form-control w-full max-w-xs">
-                            <div class="avatar flex justify-center items-center pt-4">
-                                <div class="w-20 mb-4 rounded-full ring ring-primary ring-offset-base-100">
-                                    <img src={user.photoURL} alt="" />
-                                </div>
-                            </div>
+
                             <input
                                 type="text"
                                 placeholder="Your Name"
@@ -51,6 +79,9 @@ const MyProfile = () => {
                                 className="input input-bordered w-full max-w-xs mb-3"
                             />
                         </div>
+                        <p>{
+                            profileUpData.email
+                        }</p>
                         {/* email  */}
                         <div className="form-control w-full max-w-xs">
                             <input

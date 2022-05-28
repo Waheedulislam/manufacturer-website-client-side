@@ -1,9 +1,18 @@
-import useItems from '../../hooks/useItems';
+import { useEffect, useState } from 'react';
 import ManagePerOrders from './ManagePerOrders';
 
 const ManageProducts = () => {
 
-    const [items, setItems] = useItems();
+    const [reload, setReload] = useState(false);
+    const [items, setItems] = useState([]);
+    useEffect(() => {
+        const url = `https://protected-gorge-88195.herokuapp.com/item`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setItems(data)
+            })
+    }, [reload])
 
     return (
         <div className='my-12 '>
@@ -12,6 +21,8 @@ const ManageProducts = () => {
                 {
                     items.map(item => <ManagePerOrders
                         key={item._id}
+                        reload={reload}
+                        setReload={setReload}
                         item={item}
                     ></ManagePerOrders>)
                 }

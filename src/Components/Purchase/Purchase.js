@@ -29,7 +29,6 @@ const Purchase = () => {
             email: user.email,
             userName: user.displayName,
             name: items.name,
-            id: items._id,
             price: items.price,
             quantity: event.target.quantity.value,
             address: event.target.address.value,
