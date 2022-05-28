@@ -7,7 +7,6 @@ import Login from './Components/LoginRegister/Login/Login'
 import Register from './Components/LoginRegister/Register/Register'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import About from './Components/About/About';
 import NotFound from './Components/Shared/NotFound/NotFound';
 import Footer from './Components/Shared/Footer/Footer';
 import Purchase from './Components/Purchase/Purchase';
@@ -22,6 +21,8 @@ import ManageAllOrders from './Components/DashBoard/ManageAllOrders';
 import AddAProduct from './Components/DashBoard/AddAProduct';
 import ManageProducts from './Components/DashBoard/ManageProducts';
 import Payment from './Components/DashBoard/Payment';
+import MyProtoFully from './Components/MyProtoFully/MyProtoFully';
+import Blogs from './Components/Blogs/Blogs';
 
 function App() {
   return (
@@ -31,7 +32,8 @@ function App() {
         <Route path="/" element={<Home></Home>} />
         <Route path="home" element={<Home></Home>} />
         <Route path="tools" element={<Tools></Tools>} />
-        <Route path="about" element={<About></About>} />
+        <Route path="blogs" element={<Blogs></Blogs>} />
+        <Route path="myProtoFolio" element={<MyProtoFully></MyProtoFully>} />
         <Route path='login' element={<Login></Login>}></Route>
         <Route path="register" element={<Register></Register>} />
 

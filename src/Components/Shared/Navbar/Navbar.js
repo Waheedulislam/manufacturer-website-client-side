@@ -13,7 +13,8 @@ const Navbar = () => {
     };
     const menuItems = <>
         <li><NavLink to='/home' className='rounded-lg m-2 '>Home</NavLink ></li>
-        <li><NavLink to='/about' className='rounded-lg m-2 '>About</NavLink ></li>
+        <li><NavLink to='/myProtoFolio' className='rounded-lg m-2 '>ProtoFolio</NavLink ></li>
+        <li><NavLink to='/Blogs' className='rounded-lg m-2 '>Blogs</NavLink ></li>
         {
             user && <li><NavLink to='/dashBoard' className='rounded-lg m-2 '>DashBoard</NavLink ></li>
         }
