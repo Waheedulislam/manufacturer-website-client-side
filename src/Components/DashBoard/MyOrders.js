@@ -34,7 +34,7 @@ const MyOrders = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure want to delete ?')
         if (proceed) {
-            const url = `http://localhost:5000/itemOrder/${id}`
+            const url = `https://protected-gorge-88195.herokuapp.com/itemOrder/${id}`
             fetch(url, {
                 method: 'DELETE'
             })

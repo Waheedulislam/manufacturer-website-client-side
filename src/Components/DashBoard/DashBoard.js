@@ -20,11 +20,8 @@ const DashBoard = () => {
                 <label for="dashboard-sidebar" className="drawer-overlay"></label>
                 <ul className="menu p-4 overflow-y-auto w-80  text-base-content bg-base-100">
 
-
                     < li className='py-2' > <Link to='/dashBoard'>My Orders</Link></li>
                     <li className='pb-2'><NavLink to='/dashBoard/review'>Add a Review</NavLink></li>
-
-
                     <li className='pb-2'><NavLink to='/dashBoard/myProfile'>My Profile</NavLink></li>
 
                     {

@@ -13,7 +13,7 @@ const AddAProduct = () => {
             description: event.target.description.value,
             img: event.target.img.value,
         }
-        const url = `http://localhost:5000/item`
+        const url = `https://protected-gorge-88195.herokuapp.com/item`
         fetch(url, {
             method: 'POST',
             headers: {
