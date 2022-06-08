@@ -24,7 +24,7 @@ const ManagePerOrders = ({ item, reload, setReload }) => {
         <div >
             <div className="card card-compacts bg-base-100 shadow-xl">
                 <figure><img className='h-44' src={img} alt="Shoes" /></figure>
-                <div className="card-body">
+                <div className="card-body my-5">
                     <h2 className="text-2xl  font-bold">{name}</h2>
                     <p className='text-base'>{description.slice(0, 50) + '...'}</p>
                     <h5 className='text-lg'>Price: BDT <span className='text-sky-600'>{price}/pcs</span></h5>
