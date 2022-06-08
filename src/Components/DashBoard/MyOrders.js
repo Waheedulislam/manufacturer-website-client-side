@@ -48,6 +48,8 @@ const MyOrders = () => {
     }
     return (
         <div className="overflow-x-auto">
+
+            <h2 className='text-3xl font-bold text-purple-500 text-center py-5'>Welcome to Your DashBoard</h2>
             <table className="table w-full">
                 {/* <!-- head --> */}
                 <thead>

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import Loading from '../../Shared/Loading/Loading';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useToken from '../../../hooks/useToken';
+import { toast } from 'react-toastify';
 
 const Login = () => {
     const [
@@ -54,6 +55,12 @@ const Login = () => {
         console.log(data)
         signInWithEmailAndPassword(data.email, data.password);
     };
+    const adminRole = event => {
+        if (event) {
+            toast('Email: waheedul818@gmail.com Password: ppbbjj1234'
+            )
+        }
+    }
     return (
         <div>
             <div className='flex justify-center items-center h-screen'>
@@ -114,11 +121,13 @@ const Login = () => {
                                 signInError
                             }
                             <input className='btn btn-primary w-full max-w-xs' type="submit" value='Login' />
-                        </form>
 
+                        </form>
+                        <button onClick={adminRole} className='btn mt-3 btn-primary w-full max-w-xs'>Admin Role InFormation</button>
                         <p >New to in Website? <small><Link className='text-sky-800' to='/register'>Create New Account</Link></small></p>
                         <div className="divider">OR</div>
                         <button onClick={() => signInWithGoogle()} className="btn btn-outline btn-primary">Continue With Google</button>
+
                     </div>
                 </div>
             </div>

@@ -52,22 +52,10 @@ const MyProfile = () => {
             })
     }, [])
     return (
-        <div>
-            <h1 className='text-2xl text-primary font-bold'>My Profile</h1>
+        <div className='mt-12'>
+            <h1 className='text-3xl text-center text-primary font-bold'>My Profile</h1>
             <div class="card lg:w-6/12 lg:mx-60 bg-base-100 shadow-xl ">
                 <div class="card-body">
-                    <div>
-                        {
-                            profileUpData.map(profile => {
-                                if (user.email === profile.email) {
-                                    return <ul>
-                                        <p>{profile.email}</p>
-                                        <p>{profile.phon}</p>
-                                    </ul>
-                                }
-                            })
-                        }
-                    </div>
                     <form onSubmit={handleProfile} className='lg:ml-16 '>
                         <div className="form-control w-full max-w-xs">
 
