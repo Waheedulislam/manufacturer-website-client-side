@@ -23,4 +23,4 @@ A list of Tools way website used within the project and details:
 
 8) Its website is deploy by Firebase framework & server site deploy heroku.
 
-9) Admin Role Information Email: waheedul818@gmail.com Password: ppbbjj1234
+9) Admin Role Information Email: waheedul818@gmail.com  Password: ppbbjj1234
