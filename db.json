@@ -1,0 +1,52 @@
+{
+    "item": [
+        {
+            "name": "Tape Measure",
+            "description": "A tape measure or measuring tape is a flexible ruler used to measure length or distance.It consists of a ribbon of cloth, plastic, fibre glass, or metal strip with linear measurement markings.",
+            "img": "https://mobileimages.lowes.com/productimages/8cf99146-1d44-41fc-a5ee-8ccbe3f31167/00244330.jpg",
+            "price": 999.99,
+            "availableQuantity": 5000,
+            "minimumOrder": 10
+        },
+        {
+            "name": "Scissors",
+            "description": "Scissors are hand-operated shearing tools. A pair of scissors consists of a pair of blades pivoted so that the sharpened edges slide against each other when the handles (bows) opposite to the pivot are closed.",
+            "img": "https://d38zcepchip0tz.cloudfront.net/media/catalog/product/8/7/879363_14849_main_1.jpg",
+            "price": 499.99,
+            "availableQuantity": 10000,
+            "minimumOrder": 15
+        },
+        {
+            "name": "Hummer",
+            "description": "A hammer is a tool, most often a hand tool, consisting of a weighted head fixed to a long handle that is swung to deliver an impact to a small area of an object. This can be, for example, to drive nails into wood, to shape metal (as with a forge), or to crush rock.",
+            "img": "https://www.shutterstock.com/image-photo/hammer-red-black-handle-isolated-260nw-599394395.jpg",
+            "price": 149.99,
+            "availableQuantity": 20000,
+            "minimumOrder": 20
+        },
+        {
+            "name": "Tester",
+            "description": "An electric instrument which is used to check the flow of electric current is called tester. It is attached to the terminals of the electric circuit. If the bulb of tester glows, it confirms that electric current is flowing through the circuit.",
+            "img": "https://i5.walmartimages.com/seo/Intelligent-Voltage-Tester-Pen-Non-contact-Induction-Digital-Power-Detector-Pencil-Electric-Screwdriver-Probe-Circuit-Indicator-dual-light_607ada8c-322a-49f6-b7d3-70e2cee60fbe.726ffc476e6e1c3fdfa16d289d8c326e.jpeg",
+            "price": 199.99,
+            "availableQuantity": 75000,
+            "minimumOrder": 10
+        },
+        {
+            "name": "Screwdriver",
+            "description": "screwdriver, tool, usually hand-operated, for turning screws with slotted heads. For screws with one straight diametral slot cut across the head, standard screwdrivers with flat blade tips and in a variety of sizes are used.",
+            "img": "https://partschai.com/public/uploads/all/ywgpBJKNZA8UZfu4wbz8JVEYmd84e4YWeOWzdNFZ.jpg",
+            "price": 299.99,
+            "availableQuantity": 3000,
+            "minimumOrder": 10
+        },
+        {
+            "name": "Saw",
+            "description": "A saw is a tool consisting of a tough blade, wire, or chain with a hard toothed edge. It is used to cut through material, very often wood, though sometimes metal or stone.",
+            "img": "https://www.shutterstock.com/image-photo/saw-isolated-on-white-background-260nw-1712063470.jpg",
+            "price": 799.99,
+            "availableQuantity": 2000,
+            "minimumOrder": 15
+        }
+    ]
+}
